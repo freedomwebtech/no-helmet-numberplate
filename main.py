@@ -37,7 +37,7 @@ def RGB(event, x, y, flags, param):
 cv2.namedWindow('RGB')
 cv2.setMouseCallback('RGB', RGB)
 
-# Load YOLOv8 model
+# Load YOLO11 model
 model = YOLO("best.pt")
 names = model.names
 
@@ -72,7 +72,7 @@ while True:
     
     frame = cv2.resize(frame, (1020, 500))
     
-    # Run YOLOv8 tracking on the frame
+    # Run YOLO11 tracking on the frame
     results = model.track(frame, persist=True)
     
     # Initialize flags and variables
