@@ -113,7 +113,7 @@ while True:
             print(f"Detected Number Plate: {text}")
             
             # Save the cropped image with current time as filename
-            current_time = datetime.now().strftime('%H-%M-%S')
+            current_time = datetime.now().strftime('%H:%M:%S')
             crop_image_path = os.path.join(current_date, f"{text}_{current_time}.jpg")
             cv2.imwrite(crop_image_path, crop)
             
